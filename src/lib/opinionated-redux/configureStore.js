@@ -12,7 +12,9 @@ const createStoreWithMiddleware = sideEffects => compose(
 		devTools()
 )(createStore);
 
-const configureStore = ({ reducers, sideEffects, initialState }) =>
-	createStoreWithMiddleware(sideEffects)(combineReducers(reducers), initialState)
+const configureStore = ({ reducers, sideEffects, initialState }) => {
+	return createStoreWithMiddleware(sideEffects)(combineReducers(reducers), initialState);
+}
+
 
 export default configureStore;

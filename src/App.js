@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { actions, connect } from './state';
+import { actions } from './state';
+import { connect } from './lib/opinionated-redux';
 
 class App extends Component {
 	componentDidMount() {

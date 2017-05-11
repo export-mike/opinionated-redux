@@ -21,13 +21,13 @@ export const creators = {
 	})
 };
 
-export const sideEffects = ({
+export const sideEffects = {
 	[constants.FETCH_USER]: async ({ state, payload: { id }, dispatch }) => {
 		setTimeout(
 			() => dispatch(creators.fetchUserSuccess({ name: 'mike' }))
 		, 1000)
 	},
-});
+};
 
 export default createReducer({
 	name: null,
