@@ -1,3 +1,14 @@
+# Redux is very useful it has its place in predictable state management with react apps.
+
+It comes with very little to no opinions.
+
+Redux is very loose in how you execute asynchronous operations.
+
+Its too easy for other devs to come in and add Async calls in different ways.
+
+
+## Create React APP
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
