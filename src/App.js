@@ -6,7 +6,7 @@ import { connect } from './lib/opinionated-redux';
 
 class App extends Component {
 	componentDidMount() {
-		this.props.fetchUser(1);
+		this.props.fetchUserAndPosts(1);
 	}
 
   render() {
@@ -24,4 +24,4 @@ class App extends Component {
 }
 
 const mapStateToProps = ({ user }) => ({ user });
-export default connect(mapStateToProps, { fetchUser: actions.user.fetchUser })(App);
+export default connect(mapStateToProps, { fetchUserAndPosts: actions.user.fetchUserAndPosts })(App);
