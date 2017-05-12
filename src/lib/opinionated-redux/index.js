@@ -1,8 +1,8 @@
 import configureStore from './configureStore';
 import createReducer from './createReducer';
 import createConstants from './createConstants';
-import buildConfig from './buildConfig';
-export { createReducer, createConstants, buildConfig };
+import setup from './setup';
+export { createReducer, createConstants, setup };
 
 export default (config, initialState) => {
 	return configureStore({...config, initialState})
