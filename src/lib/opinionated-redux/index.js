@@ -5,6 +5,7 @@ import setup from './setup';
 export { createReducer, createConstants, setup };
 
 export default (config, initialState) => {
+	console.log(config);
 	return configureStore({...config, initialState})
 };
 

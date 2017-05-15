@@ -1,7 +1,13 @@
-export default sideEffects => store => next => action => {
+export default (sideEffects, sharedSideEffects) => store => next => action => {
 	const effect = sideEffects[action.type];
-	next(action);
-	if (effect) {
+
+	if (Array.isArray(effect)) {
+		effect.forEach(sideEffect => {
+			sideEffect({ state: store.getState(), payload: action.payload, dispatch: store.dispatch })
+		});
+	} else if (effect) {
 		effect({ state: store.getState(), payload: action.payload, dispatch: store.dispatch });
 	}
+
+	next(action);
 };
