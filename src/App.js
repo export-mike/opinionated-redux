@@ -5,9 +5,9 @@ import { actions } from './state';
 import { connect } from './lib/opinionated-redux';
 
 class App extends Component {
-	componentDidMount() {
-		this.props.fetchUser(1);
-	}
+  componentDidMount() {
+    this.props.fetchUser(1);
+  }
 
   render() {
     return (
@@ -15,8 +15,8 @@ class App extends Component {
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           {this.props.user.isLoading && <h2> Please Wait...</h2> }
-					{this.props.user.errorLoading && <h2> An Error Occured Loading </h2>}
-					{this.props.user.name && <h1> Hello {this.props.user.name} </h1>}
+	  {this.props.user.errorLoading && <h2> An Error Occured Loading </h2>}
+	  {this.props.user.name && <h1> Hello {this.props.user.name} </h1>}
         </div>
       </div>
     );
